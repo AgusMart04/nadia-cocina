@@ -3,9 +3,14 @@ import pizza from "@/assets/pizza.jpg";
 import pizza1 from "@/assets/pizza-1.jpg";
 import pizza2 from "@/assets/pizza-2.jpg";
 import pizza3 from "@/assets/pizza-3.jpg";
+import pizza4 from "@/assets/pizza-4.jpg";
+import pizza5 from "@/assets/pizza-5.jpg";
 import miga from "@/assets/miga.jpg";
 import miga1 from "@/assets/miga-1.jpg";
 import miga2 from "@/assets/miga-2.jpg";
+import miga3 from "@/assets/miga-3.jpg";
+import miga4 from "@/assets/miga-4.jpg";
+import miga5 from "@/assets/miga-5.jpg";
 import medialunas from "@/assets/medialunas.jpg";
 import medialunas1 from "@/assets/medialunas-1.jpg";
 import medialunas2 from "@/assets/medialunas-2.jpg";
@@ -14,6 +19,9 @@ import medialunas4 from "@/assets/medialunas-4.jpg";
 import medialunas5 from "@/assets/medialunas-5.jpg";
 import medialunas6 from "@/assets/medialunas-6.jpg";
 import medialunas7 from "@/assets/medialunas-7.jpg";
+import medialunas8 from "@/assets/medialunas-8.jpg";
+import medialunas9 from "@/assets/medialunas-9.jpg";
+import medialunas10 from "@/assets/medialunas-10.jpg";
 import catering from "@/assets/catering.jpg";
 import catering1 from "@/assets/catering-1.jpg";
 import catering2 from "@/assets/catering-2.jpg";
@@ -22,16 +30,20 @@ import catering4 from "@/assets/catering-4.jpg";
 import catering5 from "@/assets/catering-5.jpg";
 import catering6 from "@/assets/catering-6.jpg";
 import catering7 from "@/assets/catering-7.jpg";
+import catering8 from "@/assets/catering-8.jpg";
+import catering9 from "@/assets/catering-9.jpg";
+import catering10 from "@/assets/catering-10.jpg";
+import catering11 from "@/assets/catering-11.jpg";
 import empanadas from "@/assets/empanadas.jpg";
 import empanadas1 from "@/assets/empanadas-1.jpg";
 import empanadas2 from "@/assets/empanadas-2.jpg";
 import { ImageGallery } from "./ImageGallery";
 
 const items = [
-  { img: pizza, title: "Pizzas listas para hornear", text: "Listas en solo 10 minutos.", tag: "Más pedido", gallery: [pizza, pizza1, pizza2, pizza3] },
-  { img: miga, title: "Tortas de miga", text: "Ideales para reuniones y eventos.", tag: "Encargo", gallery: [miga, miga1, miga2] },
-  { img: medialunas, title: "Panadería artesanal", text: "Medialunas, fosforitos, chipá y más.", tag: "Diario", gallery: [medialunas, medialunas1, medialunas2, medialunas3, medialunas4, medialunas5, medialunas6, medialunas7] },
-  { img: catering, title: "Catering frío", text: "Soluciones para cumpleaños y eventos.", tag: "Eventos", gallery: [catering, catering1, catering2, catering3, catering4, catering5, catering6, catering7] },
+  { img: pizza, title: "Pizzas listas para hornear", text: "Listas en solo 10 minutos.", tag: "Más pedido", gallery: [pizza, pizza1, pizza2, pizza3, pizza4, pizza5] },
+  { img: miga, title: "Tortas de miga", text: "Ideales para reuniones y eventos.", tag: "Encargo", gallery: [miga, miga1, miga2, miga3, miga4, miga5] },
+  { img: medialunas, title: "Panadería artesanal", text: "Medialunas, fosforitos, chipá y más.", tag: "Diario", gallery: [medialunas, medialunas1, medialunas2, medialunas3, medialunas4, medialunas5, medialunas6, medialunas7, medialunas8, medialunas9, medialunas10] },
+  { img: catering, title: "Catering frío", text: "Soluciones para cumpleaños y eventos.", tag: "Eventos", gallery: [catering, catering1, catering2, catering3, catering4, catering5, catering6, catering7, catering8, catering9, catering10, catering11] },
   { img: empanadas, title: "Empanadas caseras", text: "Sabores clásicos hechos artesanalmente.", tag: "Clásico", gallery: [empanadas, empanadas1, empanadas2] },
 ];
 

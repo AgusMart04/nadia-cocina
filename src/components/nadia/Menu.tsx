@@ -1,16 +1,12 @@
 import { useMemo, useState } from "react";
 import { ChevronUp, Minus, Plus, ShoppingBag } from "lucide-react";
 import { categories, menu, formatARS, waLink, type MenuItem } from "./data";
+import { useCart } from "./CartContext";
 
 export type CartState = Record<string, number>;
 
-export function MenuSection({
-  cart,
-  setCart,
-}: {
-  cart: CartState;
-  setCart: React.Dispatch<React.SetStateAction<CartState>>;
-}) {
+export function MenuSection() {
+  const { cart, setCart } = useCart();
   const [active, setActive] = useState<string>("pizzas");
   const visible = useMemo(() => menu.filter((m) => m.category === active), [active]);
 
@@ -155,13 +151,8 @@ function MenuCard({
   );
 }
 
-export function CartBar({
-  cart,
-  clear,
-}: {
-  cart: CartState;
-  clear: () => void;
-}) {
+export function CartBar() {
+  const { cart, clear } = useCart();
   const [open, setOpen] = useState(false);
   const entries = Object.entries(cart);
   const total = entries.reduce((acc, [id, q]) => {

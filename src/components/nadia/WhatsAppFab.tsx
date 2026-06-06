@@ -1,8 +1,11 @@
 import { MessageCircle } from "lucide-react";
 import { waLink } from "./data";
+import { useCart } from "./CartContext";
 
-export function WhatsAppFab({ hidden }: { hidden?: boolean }) {
-  if (hidden) return null;
+export function WhatsAppFab() {
+  const { cart } = useCart();
+  const count = Object.values(cart).reduce((a, b) => a + b, 0);
+  if (count > 0) return null;
   return (
     <a
       href={waLink("¡Hola Nadia! Quiero hacer un pedido 🍕")}

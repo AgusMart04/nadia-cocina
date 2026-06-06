@@ -1,6 +1,7 @@
+import { Link } from "@tanstack/react-router";
 import { Instagram, MessageCircle, MapPin } from "lucide-react";
 import { waLink } from "./data";
-import logo from "@/assets/logo recortado.png";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -23,17 +24,17 @@ export function Footer() {
           <div>
             <h4 className="font-display text-base text-cream mb-4">Navegar</h4>
             <ul className="space-y-2 text-sm">
-              {[
-                ["Productos", "#productos"],
-                ["Menú", "#menu"],
-                ["Promos", "#promos"],
-                ["Nosotros", "#nosotros"],
-                ["Opiniones", "#opiniones"],
-              ].map(([l, h]) => (
+              {([
+                ["Productos", "/productos"],
+                ["Menú", "/menu"],
+                ["Promos", "/promos"],
+                ["Nosotros", "/nosotros"],
+                ["Opiniones", "/opiniones"],
+              ] as const).map(([l, h]) => (
                 <li key={h}>
-                  <a href={h} className="text-cream/65 hover:text-gold transition">
+                  <Link to={h} className="text-cream/65 hover:text-gold transition">
                     {l}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

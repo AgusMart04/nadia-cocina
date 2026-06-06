@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Star, Truck, Sparkles } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import { waLink } from "./data";
@@ -46,12 +47,12 @@ export function Hero() {
               Hacer pedido por WhatsApp
               <span className="transition-transform group-hover:translate-x-0.5">→</span>
             </a>
-            <a
-              href="#menu"
+            <Link
+              to="/menu"
               className="inline-flex items-center gap-2 rounded-full border border-cream/40 bg-cream/10 px-7 py-4 text-sm sm:text-base font-medium text-cream backdrop-blur transition-all hover:bg-cream/20"
             >
               Ver menú
-            </a>
+            </Link>
           </div>
         </div>
 

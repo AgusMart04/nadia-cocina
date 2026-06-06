@@ -7,6 +7,12 @@ import {
   HeadContent,
 } from "@tanstack/react-router";
 
+import { CartProvider } from "@/components/nadia/CartContext";
+import { Navbar } from "@/components/nadia/Navbar";
+import { Footer } from "@/components/nadia/Footer";
+import { WhatsAppFab } from "@/components/nadia/WhatsAppFab";
+import { useReveal } from "@/hooks/use-reveal";
+
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -105,11 +111,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  useReveal();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <HeadContent />
-      <Outlet />
+      <CartProvider>
+        <HeadContent />
+        <Navbar />
+        <Outlet />
+        <Footer />
+        <WhatsAppFab />
+      </CartProvider>
     </QueryClientProvider>
   );
 }
