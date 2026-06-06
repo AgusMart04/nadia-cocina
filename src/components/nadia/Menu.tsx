@@ -3,8 +3,6 @@ import { ChevronUp, Minus, Plus, ShoppingBag } from "lucide-react";
 import { categories, menu, formatARS, waLink, type MenuItem } from "./data";
 import { useCart } from "./CartContext";
 
-export type CartState = Record<string, number>;
-
 export function MenuSection() {
   const { cart, setCart } = useCart();
   const [active, setActive] = useState<string>("pizzas");

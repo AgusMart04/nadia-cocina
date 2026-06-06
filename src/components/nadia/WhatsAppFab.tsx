@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { waLink } from "./data";
 import { useCart } from "./CartContext";
@@ -5,7 +6,22 @@ import { useCart } from "./CartContext";
 export function WhatsAppFab() {
   const { cart } = useCart();
   const count = Object.values(cart).reduce((a, b) => a + b, 0);
-  if (count > 0) return null;
+  const [footerVisible, setFooterVisible] = useState(false);
+
+  useEffect(() => {
+    const footer = document.querySelector("footer");
+    if (!footer) return;
+
+    const io = new IntersectionObserver(
+      ([entry]) => setFooterVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    io.observe(footer);
+    return () => io.disconnect();
+  }, []);
+
+  if (count > 0 || footerVisible) return null;
+
   return (
     <a
       href={waLink("¡Hola Nadia! Quiero hacer un pedido 🍕")}

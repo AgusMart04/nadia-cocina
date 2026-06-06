@@ -81,6 +81,27 @@ export function Footer() {
           <span>© {new Date().getFullYear()} Nadia Cocina. Todos los derechos reservados.</span>
           <span>Hecho con 🤎 en Marcos Paz, Argentina.</span>
         </div>
+
+        <div className="mt-4 text-center text-xs text-cream/35">
+          Sitio web desarrollado por{" "}
+          <a
+            href="https://agustin-webs.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-2 py-0.5 rounded-md text-cream/65 bg-cream/5 hover:bg-cream/10 hover:text-gold underline-offset-2 hover:underline transition-all"
+          >
+            Agustin Web Studio
+          </a>
+          {" · "}
+          <a
+            href="https://www.instagram.com/websites.agus/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-2 py-0.5 rounded-md text-cream/65 bg-cream/5 hover:bg-cream/10 hover:text-gold underline-offset-2 hover:underline transition-all"
+          >
+            Instagram
+          </a>
+        </div>
       </div>
     </footer>
   );

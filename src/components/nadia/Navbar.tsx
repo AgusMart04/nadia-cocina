@@ -102,25 +102,25 @@ export function Navbar() {
           <nav className="flex flex-col gap-3">
             {links.map((l) =>
               l.external ? (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cocoa/85 py-1.5 flex items-center gap-1.5"
-                >
-                  <Instagram size={14} />
-                  {l.label}
-                </a>
-              ) : (
-                <Link
-                  key={l.to}
-                  to={l.to}
-                  onClick={() => setOpen(false)}
-                  className="text-cocoa/85 py-1.5 flex items-center gap-1.5"
-                >
-                  {l.label}
-                </Link>
+              <a
+                key={l.href}
+                href={l.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cocoa/85 py-1.5 flex items-center gap-1.5"
+              >
+                <Instagram size={14} />
+                {l.label}
+              </a>
+            ) : (
+              <Link
+                key={l.to}
+                to={l.to}
+                onClick={() => setOpen(false)}
+                className="text-cocoa/85 py-1.5 flex items-center gap-1.5"
+              >
+                {l.label}
+              </Link>
               )
             )}
             <a
